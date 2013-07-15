@@ -20,7 +20,7 @@ To begin a fresh project with vlibrary, create your new git repository as usual,
 then follow these instructions within your repository's root to get started.
 
 1. `git remote add -f vlibrary git://github.com/Moult/vlibrary.git`
-2. `git merge -Xtheirs vlibrary/master`
+2. `git merge -Xtheirs vlibrary/dci`
 3. Get [Composer](http://getcomposer.org) `curl -s
    http://getcomposer.org/installer | php` and then run `php composer.phar
    install --dev`. This is needed to set up testing tools (installs into
