@@ -12,7 +12,7 @@ interface Emailer
      * Sets the 'to' email address.
      *
      * Example:
-     * $emailer->set_to(array('foo@bar.com', 'bar@foo.com'));
+     * $emailer->set_to(array('foo@bar.com' => 'Foo Name', 'bar@foo.com' = 'Bar Name'));
      *
      * @param array $to An array of email addresses to send to.
      *
@@ -24,7 +24,7 @@ interface Emailer
      * Sets the 'from' email address.
      *
      * Example:
-     * $emailer->set_from(array('foo@bar.com', 'bar@foo.com'));
+     * $emailer->set_from(array('foo@bar.com' => 'Foo Name', 'bar@foo.com' => 'Bar Name'));
      *
      * @param array $from An array of email addresses to send from.
      *
@@ -33,16 +33,16 @@ interface Emailer
     public function set_from($from);
 
     /**
-     * Sets whether or not the email is HTML.
+     * Sets the HTML content of the email.
      *
      * Example:
-     * $emailer->set_html(TRUE);
+     * $emailer->set_html('<html>Foo</html>');
      *
-     * @param bool $is_html TRUE is the email is HTML, else FALSE for plaintext
+     * @param strong $html The HTML alternative part of the message
      *
      * @return void
      */
-    public function set_html($is_html);
+    public function set_html($html);
 
     /**
      * Sets the subject of the email.
@@ -57,7 +57,7 @@ interface Emailer
     public function set_subject($subject);
 
     /**
-     * Sets the body of the email.
+     * Sets the plaintext body of the email.
      *
      * Example:
      * $emailer->set_body('Foo bar foo bar foo bar');
@@ -72,7 +72,7 @@ interface Emailer
      * Sends out a new email.
      *
      * Example:
-     * $mail->send();
+     * $emailer->send();
      *
      * @return void
      */
