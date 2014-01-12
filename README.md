@@ -6,7 +6,7 @@ and Phing.
 ## vlibrary-dci
 
 The DCI branch provides useful tool interfaces and exception classes when
-developing in a DCI environment.
+developing in a DCI-like environment.
 
 Be sure to prune what you don't need during the project, check the license
 definition (default is MIT), and change the namespace.
@@ -22,6 +22,8 @@ then follow these instructions within your repository's root to get started.
 1. `git remote add -f vlibrary git://github.com/Moult/vlibrary.git`
 2. `git merge -Xtheirs vlibrary/dci`
 3. Delete the readme contents up to the `Development` section.
+4. Change physical namespace by renaming `VLibrary` in `src` and `spec`
+5. Change code namespace with `find . -type f -exec sed -i "s/VLibrary/Foo" \{} \;`
 
 # Development
 
